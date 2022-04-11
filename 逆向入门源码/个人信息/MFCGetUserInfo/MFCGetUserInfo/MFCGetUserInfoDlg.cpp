@@ -252,7 +252,7 @@ void CMFCGetUserInfoDlg::OnBnClickedButtonGetUserInfo()
 	// 2、获取用户名
 	
 	// 用户名偏移
-	DWORD wxNameOffset = 0x16B498C;
+	DWORD wxNameOffset = 0x222ED30;
 	// 用户名内存地址
 	DWORD wxNameAddress = dllBaseAddress + wxNameOffset;
 	// 用户名
@@ -261,9 +261,10 @@ void CMFCGetUserInfoDlg::OnBnClickedButtonGetUserInfo()
 	// 3、获取WXID
 
 	// WXID指针偏移
-	DWORD wxIDPointerOffset = 0x16B4D90;
+	DWORD wxIDPointerOffset = 0x222F020;
 	// WXID指针地址
 	DWORD wxIDPointerAddress = dllBaseAddress + wxIDPointerOffset;
+    //DWORD wxIDPointerAddress = 0X7169F020;
 	// WXID内存地址
 	DWORD wxIDAddress = GetIntByAddress(hProcess, wxIDPointerAddress);
 	// WXID
